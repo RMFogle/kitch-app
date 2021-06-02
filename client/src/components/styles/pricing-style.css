@@ -1,0 +1,43 @@
+.card-responsive {
+    padding: 5px 50px 5px 50px; 
+}
+
+.price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.center-button {
+    padding: 10px 25px;
+    text-align: center;
+}
+
+.checkmark {
+    color: #0092B3; 
+}
+
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+                .card-responsive {
+                    width: 100%;
+                }
+
+}
+
+
+    @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+            body { 
+                padding: 0; 
+                margin: 0; 
+                width: 320px; 
+            }
+        }
+
+
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+            body { 
+                width: 495px; 
+            }
+        }

@@ -1,0 +1,36 @@
+.container .row {
+    background-color: #21313C; 
+    min-height: .01%;
+    overflow:auto;
+}
+
+.chartStyle {
+    background: #21313C;
+    border: none; 
+}
+
+
+.chartStyle1 {
+    background: #21313C;
+    border: none; 
+}
+
+.chartStyle2 {
+    background: #21313C;
+    border: none;
+}
+
+.embed-responsive {
+    width: 620px;
+    height: 380px;
+}
+
+.embed-responsive1 {
+    width: 420px; 
+    height: 380px;
+}
+
+.embed-responsive2 {
+    width: 520px; 
+    height: 380px; 
+}
