@@ -1,0 +1,11 @@
+footer {
+    padding-top: 3em;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.container-fluid{
+    background-color: #f8f9fa;
+}

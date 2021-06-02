@@ -1,0 +1,62 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.container-info {
+    margin: 1em; 
+}
+
+.card-info {
+    height: 21em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.info-image {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-demo {
+    border: none;
+}
+
+#card-signup {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+                .container-main {
+                    display: block;
+                    width: 100%;
+                }
+                
+                .container-info {
+                    display: block;
+                }
+
+                .card-info {
+                    height: fit-content;
+                }
+
+                .img-second {
+                    order: 2; 
+                }
+}
+
+
+    @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+            body { 
+                padding: 0; 
+                margin: 0; 
+                width: 320px; 
+            }
+        }
+
+
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+            body { 
+                width: 495px; 
+            }
+        }
