@@ -62,7 +62,7 @@ export default class CreateScheduleDemo extends Component {
 
         console.log(scheduleDemo); 
 
-        axios.post('http://localhost:5000/scheduleDemos/add', scheduleDemo)
+        axios.post('/scheduleDemos/add', scheduleDemo)
             .then(res => console.log(res.data)); 
             
         this.setState({
@@ -72,7 +72,7 @@ export default class CreateScheduleDemo extends Component {
             message: ''
         })
 
-        window.location = '/kitch';
+        window.location = '/';
     }
 
 

@@ -126,7 +126,7 @@ export default class EditBooking extends Component {
 
 
     componentDidMount() {
-        axios.get('http://localhost:5000/bookings/'+this.props.match.params.id)
+        axios.get('/bookings/'+this.props.match.params.id)
             .then(response => {
                 this.setState({
                     clientname: response.data.clientname, 
@@ -146,7 +146,7 @@ export default class EditBooking extends Component {
                 console.log(error); 
             })
 
-        axios.get('http://localhost:5000/clients/')
+        axios.get('/clients/')
             .then(response => {
                 if (response.data.length > 0) {
                     this.setState({
@@ -257,7 +257,7 @@ export default class EditBooking extends Component {
 
         console.log(booking);
 
-        axios.post('http://localhost:5000/bookings/update/'+this.props.match.params.id, booking)
+        axios.post('/bookings/update/'+this.props.match.params.id, booking)
         .then(res => console.log(res.data)); 
 
         window.location = '/booking'; 

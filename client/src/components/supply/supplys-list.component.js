@@ -72,7 +72,7 @@ export default class SupplyList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/supplys/')
+        axios.get('/supplys/')
         .then(response => {
             this.setState({ supplys: response.data})
         })
@@ -114,7 +114,7 @@ export default class SupplyList extends Component {
 
 
     deleteSupply(id) {
-        axios.delete('http://localhost:5000/supplys/'+id)
+        axios.delete('/supplys/'+id)
             .then(res => console.log(res.data)); 
 
         this.setState({

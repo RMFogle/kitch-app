@@ -58,7 +58,7 @@ export default class CreateContactUs extends Component {
 
         console.log(contactUs); 
 
-        axios.post('http://localhost:5000/contactUs/add', contactUs)
+        axios.post('/contactUs/add', contactUs)
             .then(res => console.log(res.data)); 
             
         this.setState({

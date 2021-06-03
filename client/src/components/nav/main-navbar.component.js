@@ -34,7 +34,7 @@ export default class MainNavbar extends Component {
                         <Nav.Link href="/#how">How it Works</Nav.Link>
                         <Nav.Link href="/support">Support</Nav.Link>
                         <Nav.Link href="/pricing">Pricing</Nav.Link>
-                        <Nav.Link href="/Demo">Demo</Nav.Link>
+                        <Nav.Link href="/demo">Demo</Nav.Link>
                     </Nav>
                     <Nav>
                     <OverlayTrigger trigger="click" placement="left" overlay={popover}>

@@ -38,7 +38,7 @@ export default class TrashInventoryFromArchive extends Component {
 
 
     componentDidMount() {
-        axios.get('http://localhost:5000/archiveInventorys/'+this.props.match.params.id)
+        axios.get('/archiveInventorys/'+this.props.match.params.id)
             .then(response => {
                 this.setState({
                     fooditem: response.data.fooditem, 
@@ -57,7 +57,7 @@ export default class TrashInventoryFromArchive extends Component {
                 console.log(error); 
             })
 
-        axios.get('http://localhost:5000/archiveInventorys/')
+        axios.get('/archiveInventorys/')
             .then(response => {
                 if (response.data.length > 0) {
                     this.setState({
@@ -145,12 +145,12 @@ export default class TrashInventoryFromArchive extends Component {
 
         console.log(inventory);
 
-        axios.post('http://localhost:5000/trashInventorys/add/', inventory)
+        axios.post('/trashInventorys/add/', inventory)
         .then(res => console.log(res.data)); 
     }
 
     deleteArchiveInventory() {
-        axios.delete('http://localhost:5000/archiveInventorys/'+this.props.match.params.id)
+        axios.delete('/archiveInventorys/'+this.props.match.params.id)
         .then(res => console.log(res.data)); 
     }
 

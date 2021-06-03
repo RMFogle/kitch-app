@@ -53,7 +53,7 @@ export default class InventoryList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/inventorys/')
+        axios.get('/inventorys/')
         .then(response => {
             this.setState({ inventorys: response.data})
         })

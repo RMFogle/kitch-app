@@ -30,7 +30,7 @@ export default class EditSupply extends Component {
 
 
     componentDidMount() {
-        axios.get('http://localhost:5000/supplys/'+this.props.match.params.id)
+        axios.get('/supplys/'+this.props.match.params.id)
             .then(response => {
                 this.setState({
                     supplyitem: response.data.supplyitem, 
@@ -46,7 +46,7 @@ export default class EditSupply extends Component {
                 console.log(error); 
             })
         
-        axios.get('http://localhost:5000/supplys')
+        axios.get('/supplys')
             .then(response => {
                 if (response.data.length > 0) {
                     this.setState({
@@ -118,7 +118,7 @@ export default class EditSupply extends Component {
 
         console.log(supply); 
 
-        axios.post('http://localhost:5000/supplys/update/'+this.props.match.params.id, supply)
+        axios.post('/supplys/update/'+this.props.match.params.id, supply)
         .then(res => console.log(res.data)); 
 
         window.location = '/supply'; 

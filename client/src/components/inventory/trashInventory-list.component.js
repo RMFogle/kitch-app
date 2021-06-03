@@ -76,7 +76,7 @@ export default class TrashInventoryList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/trashInventorys/')
+        axios.get('/trashInventorys/')
         .then(response => {
             this.setState({ inventorys: response.data})
         })
@@ -118,7 +118,7 @@ export default class TrashInventoryList extends Component {
 
 
     deleteInventory(id) {
-        axios.delete('http://localhost:5000/trashInventorys/'+id)
+        axios.delete('/trashInventorys/'+id)
             .then(res => console.log(res.data)); 
 
         this.setState({

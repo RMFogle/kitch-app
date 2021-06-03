@@ -29,7 +29,7 @@ export default class TrashBooking extends Component {
 
     
     componentDidMount() {
-        axios.get('http://localhost:5000/bookings/'+this.props.match.params.id)
+        axios.get('/bookings/'+this.props.match.params.id)
             .then(response => {
                 this.setState({
                     clientname: response.data.clientname, 
@@ -44,7 +44,7 @@ export default class TrashBooking extends Component {
                 console.log(error); 
             })
 
-        axios.get('http://localhost:5000/bookings/')
+        axios.get('/bookings/')
             .then(response => {
                 if (response.data.length > 0) {
                     this.setState({
@@ -104,12 +104,12 @@ export default class TrashBooking extends Component {
 
         console.log(booking); 
 
-        axios.post('http://localhost:5000/trashBookings/add', booking)
+        axios.post('/trashBookings/add', booking)
             .then(res => console.log(res.data)); 
     }
 
     deleteBooking() {
-        axios.delete('http://localhost:5000/bookings/'+this.props.match.params.id)
+        axios.delete('/bookings/'+this.props.match.params.id)
         .then(res => console.log(res.data));
     }
 

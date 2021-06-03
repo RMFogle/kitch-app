@@ -38,7 +38,7 @@ export default class TrashInventory extends Component {
 
 
     componentDidMount() {
-        axios.get('http://localhost:5000/inventorys/'+this.props.match.params.id)
+        axios.get('/inventorys/'+this.props.match.params.id)
             .then(response => {
                 this.setState({
                     fooditem: response.data.fooditem, 
@@ -57,7 +57,7 @@ export default class TrashInventory extends Component {
                 console.log(error); 
             })
 
-        axios.get('http://localhost:5000/inventorys/')
+        axios.get('/inventorys/')
             .then(response => {
                 if (response.data.length > 0) {
                     this.setState({
@@ -145,12 +145,12 @@ export default class TrashInventory extends Component {
 
         console.log(inventory);
 
-        axios.post('http://localhost:5000/trashInventorys/add/', inventory)
+        axios.post('/trashInventorys/add/', inventory)
         .then(res => console.log(res.data)); 
     }
 
     deleteInventory() {
-        axios.delete('http://localhost:5000/inventorys/'+this.props.match.params.id)
+        axios.delete('/inventorys/'+this.props.match.params.id)
         .then(res => console.log(res.data)); 
     }
 

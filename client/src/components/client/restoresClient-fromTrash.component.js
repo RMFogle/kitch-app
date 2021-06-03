@@ -24,7 +24,7 @@ export default class TrashRestoreClient extends Component {
 
 
     componentDidMount() {
-        axios.get('http://localhost:5000/trashClients/'+this.props.match.params.id)
+        axios.get('/trashClients/'+this.props.match.params.id)
             .then(response => {
                 this.setState({
                     clientname: response.data.clientname, 
@@ -37,7 +37,7 @@ export default class TrashRestoreClient extends Component {
                 console.log(error); 
             })
 
-        axios.get('http://localhost:5000/trashClients/')
+        axios.get('/trashClients/')
             .then(response => {
                 if (response.data.length > 0) {
                     this.setState({
@@ -83,12 +83,12 @@ export default class TrashRestoreClient extends Component {
 
         console.log(client);
 
-        axios.post('http://localhost:5000/clients/add', client)
+        axios.post('/clients/add', client)
         .then(res => console.log(res.data)); 
     }
 
     deleteTrashClient() { 
-        axios.delete('http://localhost:5000/trashClients/'+this.props.match.params.id)
+        axios.delete('/trashClients/'+this.props.match.params.id)
         .then(res => console.log(res.data));
     }
 

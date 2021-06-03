@@ -70,7 +70,7 @@ export default class TrashClientList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/trashClients/')
+        axios.get('/trashClients/')
         .then(response => {
             this.setState({ clients: response.data})
         })
@@ -110,7 +110,7 @@ export default class TrashClientList extends Component {
     }
 
     deleteClient(id) {
-        axios.delete('http://localhost:5000/trashClients/'+id)
+        axios.delete('/trashClients/'+id)
             .then(res => console.log(res.data)); 
 
         this.setState({

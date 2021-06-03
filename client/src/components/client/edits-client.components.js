@@ -88,7 +88,7 @@ export default class EditClient extends Component {
 
         console.log(client);
 
-        axios.post('http://localhost:5000/clients/update/'+this.props.match.params.id, client)
+        axios.post('/clients/update/'+this.props.match.params.id, client)
         .then(res => console.log(res.data)); 
 
         window.location = '/client'; 

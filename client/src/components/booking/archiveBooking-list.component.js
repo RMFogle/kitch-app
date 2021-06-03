@@ -49,7 +49,7 @@ export default class ArchiveBookingList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/archiveBookings/')
+        axios.get('/archiveBookings/')
         .then(response => {
             this.setState({ bookings: response.data})
         })

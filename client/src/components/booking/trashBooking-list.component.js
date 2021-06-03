@@ -78,7 +78,7 @@ export default class TrashBookingList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/trashBookings/')
+        axios.get('/trashBookings/')
         .then(response => {
             this.setState({ bookings: response.data})
         })
@@ -118,7 +118,7 @@ export default class TrashBookingList extends Component {
     }
 
     deleteBooking(id) {
-        axios.delete('http://localhost:5000/trashBookings/'+id)
+        axios.delete('/trashBookings/'+id)
             .then(res => console.log(res.data)); 
 
         this.setState({

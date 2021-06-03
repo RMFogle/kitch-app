@@ -91,7 +91,7 @@ export default class CreateSupply extends Component {
 
         console.log(supply); 
 
-        axios.post('http://localhost:5000/supplys/add', supply)
+        axios.post('/supplys/add', supply)
             .then(res => console.log(res.data)); 
 
         this.setState({

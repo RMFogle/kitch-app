@@ -172,7 +172,7 @@ export default class CreateInventory extends Component {
 
         console.log(inventory); 
 
-        axios.post('http://localhost:5000/inventorys/add', inventory)
+        axios.post('/inventorys/add', inventory)
             .then(res => console.log(res.data)); 
 
         this.setState({

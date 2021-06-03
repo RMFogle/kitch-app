@@ -24,7 +24,7 @@ export default class ArchiveClient extends Component {
 
 
     componentDidMount() {
-        axios.get('http://localhost:5000/clients/'+this.props.match.params.id)
+        axios.get('/clients/'+this.props.match.params.id)
             .then(response => {
                 this.setState({
                     clientname: response.data.clientname, 
@@ -37,7 +37,7 @@ export default class ArchiveClient extends Component {
                 console.log(error); 
             })
 
-        axios.get('http://localhost:5000/clients/')
+        axios.get('/clients/')
             .then(response => {
                 if (response.data.length > 0) {
                     this.setState({
@@ -83,12 +83,12 @@ export default class ArchiveClient extends Component {
 
         console.log(client);
 
-        axios.post('http://localhost:5000/archiveClients/add', client)
+        axios.post('/archiveClients/add', client)
         .then(res => console.log(res.data)); 
     }
 
     deleteClient() { 
-        axios.delete('http://localhost:5000/clients/'+this.props.match.params.id)
+        axios.delete('/clients/'+this.props.match.params.id)
         .then(res => console.log(res.data));
     }
 

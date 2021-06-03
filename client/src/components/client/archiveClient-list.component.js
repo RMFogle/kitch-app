@@ -41,7 +41,7 @@ export default class ArchiveClientList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/archiveClients/')
+        axios.get('/archiveClients/')
         .then(response => {
             this.setState({ clients: response.data})
         })

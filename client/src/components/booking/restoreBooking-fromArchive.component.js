@@ -39,7 +39,7 @@ export default class ArchiveRestoreBooking extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/archiveBookings/'+this.props.match.params.id)
+        axios.get('/archiveBookings/'+this.props.match.params.id)
             .then(response => {
                 this.setState({
                     clientname: response.data.clientname, 
@@ -59,7 +59,7 @@ export default class ArchiveRestoreBooking extends Component {
                 console.log(error); 
             })
 
-        axios.get('http://localhost:5000/archiveBookings/')
+        axios.get('/archiveBookings/')
             .then(response => {
                 if (response.data.length > 0) {
                     this.setState({
@@ -154,12 +154,12 @@ export default class ArchiveRestoreBooking extends Component {
 
         console.log(booking); 
 
-        axios.post('http://localhost:5000/bookings/add', booking)
+        axios.post('/bookings/add', booking)
             .then(res => console.log(res.data)); 
     }
 
     deleteArchiveBooking() {
-        axios.delete('http://localhost:5000/archiveBookings/'+this.props.match.params.id)
+        axios.delete('/archiveBookings/'+this.props.match.params.id)
         .then(res => console.log(res.data));
     }
 

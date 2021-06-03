@@ -61,7 +61,7 @@ export default class CreateClient extends Component {
 
         console.log(client); 
 
-        axios.post('http://localhost:5000/clients/add', client)
+        axios.post('/clients/add', client)
             .then(res => console.log(res.data)); 
             
         this.setState({

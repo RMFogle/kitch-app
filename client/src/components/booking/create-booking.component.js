@@ -129,7 +129,7 @@ export default class CreateBooking extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/clients/')
+        axios.get('/clients/')
             .then(response => {
                 if (response.data.length > 0) {
                     this.setState({
@@ -241,7 +241,7 @@ export default class CreateBooking extends Component {
 
         console.log(booking); 
 
-        axios.post('http://localhost:5000/bookings/add', booking)
+        axios.post('/bookings/add', booking)
             .then(res => console.log(res.data)); 
 
             this.setState({
