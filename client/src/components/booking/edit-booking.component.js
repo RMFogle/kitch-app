@@ -394,7 +394,7 @@ export default class EditBooking extends Component {
                 <div className="form-group">
                     <input type="submit" value="Save" className="btn btn-primary" />
                     {" "}
-                    <Button href="/booking/">Cancel</Button>
+                    <Button href="/booking">Cancel</Button>
                 </div>
             </form>
             </div>

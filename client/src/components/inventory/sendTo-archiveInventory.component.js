@@ -146,7 +146,7 @@ export default class ArchiveInventory extends Component {
     
         console.log(inventory);
 
-        axios.post('/archiveInventorys/add/', inventory)
+        axios.post('/archiveInventorys/add', inventory)
         .then(res => console.log(res.data));
     }
 
@@ -275,7 +275,7 @@ export default class ArchiveInventory extends Component {
                     <Button type="submit" value="Archive Item">
                     Archive Item</Button>
                     {" "}
-                    <Button href="/inventory/">Cancel</Button>
+                    <Button href="/inventory">Cancel</Button>
                 </div>
             
             </form>

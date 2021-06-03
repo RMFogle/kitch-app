@@ -156,7 +156,7 @@ export default class TrashClientFromArchive extends Component {
                     <Button type="submit" value="Trash Client">
                     Trash Client</Button>
                     {" "}
-                    <Button href="/archive/">Cancel</Button>
+                    <Button href="/archive">Cancel</Button>
                 </div>
             </form>
         </div>

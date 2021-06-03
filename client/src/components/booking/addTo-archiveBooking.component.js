@@ -294,7 +294,7 @@ export default class ArchiveBooking extends Component {
                         <Button type="submit" value="Archive Booking" variant="primary">
                         Confirm</Button>
                         {" "}
-                        <Button variant="secondary" href="/booking/">Cancel</Button>
+                        <Button variant="secondary" href="/booking">Cancel</Button>
                     </div>
                 </form>
             </div>

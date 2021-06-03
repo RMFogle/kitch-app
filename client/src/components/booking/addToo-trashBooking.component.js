@@ -193,7 +193,7 @@ export default class TrashBooking extends Component {
                         <Button type="submit" value="Trash Booking">
                         Trash Booking</Button>
                         {" "}
-                        <Button href="/booking/">Cancel</Button>
+                        <Button href="/booking">Cancel</Button>
                     </div>
                 </form>
             </div>

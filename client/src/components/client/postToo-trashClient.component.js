@@ -156,7 +156,7 @@ export default class TrashClient extends Component {
                     <Button type="submit" value="Trash Client">
                     Trash Client</Button>
                     {" "}
-                    <Button href="/client/">Cancel</Button>
+                    <Button href="/client">Cancel</Button>
                 </div>
             </form>
         </div>

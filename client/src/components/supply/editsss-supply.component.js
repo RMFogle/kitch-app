@@ -46,7 +46,7 @@ export default class EditSupply extends Component {
                 console.log(error); 
             })
         
-        axios.get('/supplys')
+        axios.get('/supplys/')
             .then(response => {
                 if (response.data.length > 0) {
                     this.setState({
@@ -199,7 +199,7 @@ export default class EditSupply extends Component {
             <div className="form-group">
                 <input type="submit" value="Save" className="btn btn-primary" />
                 {" "}
-                <Button href="/supply/">Cancel</Button>
+                <Button href="/supply">Cancel</Button>
             </div>
         </form>
         </div>

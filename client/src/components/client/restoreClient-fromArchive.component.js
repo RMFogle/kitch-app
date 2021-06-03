@@ -156,7 +156,7 @@ export default class ArchiveRestoreClient extends Component {
                     <Button type="submit" value="Restore Client">
                     Restore Client</Button>
                     {" "}
-                    <Button href="/archive/">Cancel</Button>
+                    <Button href="/archive">Cancel</Button>
                 </div>
             </form>
         </div>

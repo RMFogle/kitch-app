@@ -145,7 +145,7 @@ export default class TrashInventory extends Component {
 
         console.log(inventory);
 
-        axios.post('/trashInventorys/add/', inventory)
+        axios.post('/trashInventorys/add', inventory)
         .then(res => console.log(res.data)); 
     }
 
@@ -164,7 +164,7 @@ export default class TrashInventory extends Component {
         .then(res => console.log(res.data)); 
 
     
-        window.location = '/inventory/'; 
+        window.location = '/inventory'; 
     }
 
 
@@ -275,7 +275,7 @@ export default class TrashInventory extends Component {
                     <Button type="submit" value="Trash Item">
                         Trash Item</Button>
                     {" "}
-                    <Button href="/inventory/">Cancel</Button>
+                    <Button href="/inventory">Cancel</Button>
                 </div>
             </form>
             </div>

@@ -145,7 +145,7 @@ export default class TrashRestoreInventory extends Component {
 
         console.log(inventory);
 
-        axios.post('/inventorys/add/', inventory)
+        axios.post('/inventorys/add', inventory)
         .then(res => console.log(res.data)); 
 
     }
@@ -275,7 +275,7 @@ export default class TrashRestoreInventory extends Component {
                     <Button type="submit" value="Restore Item">
                         Restore Item</Button>
                     {" "}
-                    <Button href="/trash/">Cancel</Button>
+                    <Button href="/trash">Cancel</Button>
                 </div>
 
             </form>

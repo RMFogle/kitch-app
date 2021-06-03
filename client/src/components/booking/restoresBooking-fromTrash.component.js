@@ -293,7 +293,7 @@ export default class TrashRestoreBooking extends Component {
                         <Button type="submit" value="Restore Booking">
                         Restore Booking</Button>
                         {" "}
-                        <Button href="/trash/">Cancel</Button>
+                        <Button href="/trash">Cancel</Button>
                     </div>
                 </form>
             </div>

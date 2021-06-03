@@ -293,7 +293,7 @@ export default class ArchiveRestoreBooking extends Component {
                         <Button type="submit" value="Restore Booking">
                         Restore Booking</Button>
                         {" "}
-                        <Button href="/archive/">Cancel</Button>
+                        <Button href="/archive">Cancel</Button>
                     </div>
                 </form>
             </div>
