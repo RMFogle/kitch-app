@@ -25,7 +25,7 @@ export default class EditClient extends Component {
 
 
     componentDidMount() {
-        axios.get('http://localhost:5000/clients/'+this.props.match.params.id)
+        axios.get('/clients/'+this.props.match.params.id)
             .then(response => {
                 this.setState({
                     clientname: response.data.clientname, 
@@ -38,7 +38,7 @@ export default class EditClient extends Component {
                 console.log(error); 
             })
 
-        axios.get('http://localhost:5000/clients/')
+        axios.get('/clients/')
             .then(response => {
                 if (response.data.length > 0) {
                     this.setState({
@@ -144,7 +144,7 @@ export default class EditClient extends Component {
                 <div className="form-group">
                     <input type="submit" value="Edit Client" className="btn btn-primary" />
                     {" "}
-                    <Button href="/client/">Cancel</Button>
+                    <Button href="/client">Cancel</Button>
                 </div>
             </form>
             </div>
