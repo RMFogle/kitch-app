@@ -24,14 +24,14 @@ export default class MainNavbar extends Component {
         return (
             <Navbar collapseOnSelect expand="lg">
                 <Navbar.Brand>
-                    <Link to="/kitch">
+                    <Link to="/">
                     <img width="auto" height="auto" className="img-responsive" src={Logo1} alt="logo"></img>
                     </Link>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="/kitch#how">How it Works</Nav.Link>
+                        <Nav.Link href="/#how">How it Works</Nav.Link>
                         <Nav.Link href="/support">Support</Nav.Link>
                         <Nav.Link href="/pricing">Pricing</Nav.Link>
                         <Nav.Link href="/Demo">Demo</Nav.Link>

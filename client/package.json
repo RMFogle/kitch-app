@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:5000",
-  "homepage": "http://localhost:3000/kitch",
+  "homepage": ".",
   "dependencies": {
     "@iconify-icons/entypo": "^1.1.0",
     "@iconify-icons/eva": "^1.1.0",

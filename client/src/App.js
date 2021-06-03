@@ -51,18 +51,18 @@ import TrashRestoreClient from "./components/client/restoresClient-fromTrash.com
 
 import DataChart from "./components/report/data-charts.component"; 
 
-import Footer from "./components/footer/footer.component"; 
+// import Footer from "./components/footer/footer.component"; 
 
 
 
 function App() {
   return (
+    <Router>
     <div className="page-container">
     <div className="content-wrap">
-    <Router>
       <br/>
-      <Route path="/kitch" component={MainNavbar} />
-      <Route path="/kitch" component={HomePage} />
+      <Route exact path="/" component={MainNavbar} />
+      <Route exact path="/" component={HomePage} />
       <Route path="/support" component={MainNavbar} />
       <Route path="/support" component={SupportPage} />
       <Route path="/pricing" component={MainNavbar} />
@@ -110,10 +110,9 @@ function App() {
       <Route path="/restoresBooking/:id" component={TrashRestoreBooking} />
       <Route path="/restoreClient/:id" component={ArchiveRestoreClient} />
       <Route path="/restoresClient/:id" component={TrashRestoreClient} />
+      </div>
+      </div>
     </Router>
-      </div>
-      <Footer />
-      </div>
   );
 }
 
