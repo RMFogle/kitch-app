@@ -51,7 +51,7 @@ import TrashRestoreClient from "./components/client/restoresClient-fromTrash.com
 
 import DataChart from "./components/report/data-charts.component"; 
 
-// import Footer from "./components/footer/footer.component"; 
+import Footer from "./components/footer/footer.component"; 
 
 
 
@@ -63,38 +63,49 @@ function App() {
       <br/>
       <Route exact path="/" component={MainNavbar} />
       <Route exact path="/" component={HomePage} />
+      <Route exact path="/" component={Footer} />
       <Route path="/support" component={MainNavbar} />
       <Route path="/support" component={SupportPage} />
+      <Route path="/support" component={Footer} />
       <Route path="/pricing" component={MainNavbar} />
       <Route path="/pricing" component={PricingPage} />
+      <Route path="/pricing" component={Footer} />
       <Route path="/demo" component={SubNavbar} />
       <Route path="/demo" component={ClientHomePage} />
+      <Route path="/demo" component={Footer} />
       <Route path="/inventory" component={SubNavbar} />
       <Route path="/inventory" component={CreateInventory} />
       <Route path="/inventory" component={InventoryList} />
+      <Route path="/inventory" component={Footer} />
       <Route path="/supply" component={SubNavbar} />
       <Route path="/supply" component={CreateSupply} />
       <Route path="/supply" component={SupplyList} />
+      <Route path="/supply" component={Footer} />
       <Route path="/booking" component={SubNavbar} />
       <Route path="/booking" component={CreateBooking} />
       <Route path="/booking" component={BookingsList} />
+      <Route path="/booking" component={Footer} />
       <Route path="/client" component={SubNavbar} />
       <Route path="/client" component={CreateClient} /> 
       <Route path="/client" component={ClientsList} />
+      <Route path="/client" component={Footer} />
       <Route path="/edit/:id" component={EditBooking} />
       <Route path="/edits/:id" component={EditClient} />
       <Route path="/editss/:id" component={EditInventory} />
       <Route path="/editsss/:id" component={EditSupply} />
       <Route path="/report" component={SubNavbar} />
       <Route path="/report" component={DataChart} />
+      <Route path="/report" component={Footer} />
       <Route path="/archive" component={SubNavbar} />
       <Route path="/archive" component={ArchiveInventoryList} />
       <Route path="/archive" component={ArchiveClientList} />
       <Route path="/archive" component={ArchiveBookingList} />
+      <Route path="/archive" component={Footer} />
       <Route path="/trash" component={SubNavbar} />
       <Route path="/trash" component={TrashInventoryList} />
       <Route path="/trash" component={TrashClientList} />
       <Route path="/trash" component={TrashBookingList} />
+      <Route path="/trash" component={Footer} />
       <Route path="/postTo/:id" component={ArchiveClient} />
       <Route path="/postToo/:id" component={TrashClient} />
       <Route path="/postToTrash/:id" component={TrashClientFromArchive} />
