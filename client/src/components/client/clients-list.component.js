@@ -44,7 +44,7 @@ export default class ClientsList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:5000/clients/')
+        axios.get('/clients/')
         .then(response => {
             this.setState({ clients: response.data})
         })
