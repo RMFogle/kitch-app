@@ -16,7 +16,7 @@ export default class SupportPage extends Component {
     render() {
         return (
             <div className="card-responsive">
-            <div className="container-responsive">
+            <div className="container-support">
                 <Row>
                     <Col md={12} lg={6}>
                 <Card id="card3">
@@ -32,14 +32,14 @@ export default class SupportPage extends Component {
                 <Col md={12} lg={6}>
                 <Card id="card4" border="info">
                     <Card.Img variant="top" src={Contact} />
-                    <Card.Body>
+                    <Card.Body className="contact-us">
                         <Card.Text></Card.Text>
                     <ContactUs />
                     </Card.Body>
                 </Card>
                 </Col>
                 </Row>
-                </div>
+            </div>
                 <br></br>
                 <div>
                     <h2>FAQ's:</h2>

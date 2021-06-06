@@ -4,13 +4,13 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom'; 
 import Logo1 from '../img/kitch-navlogo-2a.png';
-import '../styles/table-style.css'; 
+import '../styles/nav-style.css'; 
 
 export default class SubNavbar extends Component {
 
     render() {
         return (
-            <Navbar collapseOnSelect expand="lg">
+            <Navbar collapseOnSelect expand="lg" className="nav-responsive">
             <Navbar.Brand>
                 <Link to="/demo">
                 <img width="auto" height="auto" className="img-responsive" src={Logo1} alt="logo"></img>

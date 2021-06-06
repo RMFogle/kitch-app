@@ -6,6 +6,7 @@ import { Icon } from '@iconify/react';
 import arrowDropDownLine from '@iconify-icons/ri/arrow-drop-down-line';
 import NumberFormat from 'react-number-format';
 import DatePicker from 'react-date-picker';
+import '../styles/table-style.css'; 
 
 
 const CategoryType = () => (

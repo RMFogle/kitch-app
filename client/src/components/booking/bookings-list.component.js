@@ -46,6 +46,8 @@ export default class BookingsList extends Component {
         this.compareByAscend.bind(this); 
         this.sortByUp.bind(this); 
         this.sortByDown.bind(this);
+        this.filterContent.bind(this); 
+        this.handleTextSearch.bind(this);
     }
 
     componentDidMount() {
@@ -94,6 +96,32 @@ export default class BookingsList extends Component {
         })
     }
 
+    filterContent(bookings, searchBooking) {
+        const result = bookings.filter((booking) => 
+        booking.clientname.toLowerCase().includes(searchBooking.toLowerCase())||
+        booking.eventtype.toLowerCase().includes(searchBooking.toLowerCase())||
+        booking.location.toLowerCase().includes(searchBooking.toLowerCase())||
+        booking.meal.toLowerCase().includes(searchBooking.toLowerCase())||
+        booking.menu.toLowerCase().includes(searchBooking.toLowerCase())||
+        booking.date.toString().includes(searchBooking)||
+        booking.starttime.toLowerCase().includes(searchBooking.toLowerCase())||
+        booking.endtime.toLowerCase().includes(searchBooking.toLowerCase())||
+        booking.guestcount.toString().includes(searchBooking)||
+        booking.costperguest.toString().includes(searchBooking)||
+        booking.totalcost.toString().includes(searchBooking)
+        ); 
+        this.setState({ bookings: result })
+    }
+
+    handleTextSearch = (e) => {
+        const searchBooking = e.currentTarget.value; 
+        axios.get('/bookings/')
+        .then(response => {
+        let bookingCopy = (response.data)
+        this.filterContent(bookingCopy, searchBooking)
+        })
+    }; 
+
 
     render() { 
         return (
@@ -106,6 +134,17 @@ export default class BookingsList extends Component {
                         </Accordion.Toggle>
                         <Accordion.Collapse eventKey="1">
                         <Card.Body>
+                        <div className="search">
+                                <input 
+                                    className="form-control"
+                                    type="search"
+                                    placeholder="Search"
+                                    name="searchBooking"
+                                    onChange={this.handleTextSearch}
+                                ></input>
+                        </div>
+                    <br>
+                    </br>
                 <table className="table table-sm table-hover table-bordered">
                     <thead className="thead-light">
                         <tr>

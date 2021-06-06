@@ -22,7 +22,6 @@ import BookingScreenshot from '../img/booking-info-home.jpg';
 import ReportScreenshot from '../img/reports-info-home.jpg';
 import Quote from '../img/quote-homepage.png'; 
 import FreeDemo from '../img/getstarted-freedemo.png'; 
-import CreateScheduleDemo from './scheduleDemo.component'; 
 import '../styles/homePage-style.css';
 
 
@@ -98,7 +97,7 @@ export default class HomePage extends Component {
                         <Card.Body>
                         <Card.Title>Manage Your Inventory</Card.Title>
                             <Card.Text>
-                            Add food items and kitchen supplies. Keep track of total costs and stock. 
+                            Add food items and kitchen supplies. Search inventory and keep track of stock and total costs. 
                             </Card.Text>
                         </Card.Body>
                     </Card>
@@ -172,24 +171,21 @@ export default class HomePage extends Component {
         </Container>
         <br>
         </br>
-        <div className="container-demo">
-            <Card className="card-demo">
-                    <Card.Img variant="top" src={FreeDemo} />
-                        <Card.Body>
-                            <div className="row">
-                                <div className="col-md-4">
-                                <Button href="/demo" variant="info" size="lg">FREE Demo</Button>
-                                </div>
-                            <br>
-                            </br>
-                                <div className="col-md-8">
-                                    <CreateScheduleDemo />
-                                </div>
-                            </div>
-                        </Card.Body>
-                    </Card>
-                    <br>
-                    </br>
+        <Container className="container-demo" fluid>
+                <Row>
+                    <Col md={12} lg={12}>
+                        <Card className="card-demo">
+                            <Card.Img variant="top" src={FreeDemo} />
+                                <Card.Body>
+                                    <Button href="/demo" variant="info" size="lg">FREE Demo</Button>
+                                </Card.Body>
+                        </Card>
+                    </Col> 
+                </Row>
+        </Container>
+        <br>
+        </br>
+        <Container>
                     <Card className="text-center" id="card-signup">
                         <Card.Body>
                         <Card.Title><h4>Manage Your Catering Business Today!</h4></Card.Title>
@@ -197,7 +193,7 @@ export default class HomePage extends Component {
                                 <Button href="/pricing" variant="success" size="lg">Sign Up</Button>
                         </Card.Body>
                     </Card>
-                </div>
+        </Container>
             </div>
         )
     }

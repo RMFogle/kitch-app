@@ -41,6 +41,8 @@ export default class ClientsList extends Component {
         this.compareByAscend.bind(this); 
         this.sortByUp.bind(this); 
         this.sortByDown.bind(this);
+        this.filterContent.bind(this); 
+        this.handleTextSearch.bind(this);
     }
 
     componentDidMount() {
@@ -83,6 +85,25 @@ export default class ClientsList extends Component {
         this.setState({clients: arrayCopy});
     }
 
+    filterContent(clients, searchClient) {
+        const result = clients.filter((client) =>
+        client.clientname.toLowerCase().includes(searchClient.toLowerCase())||
+        client.phone.toLowerCase().includes(searchClient.toLowerCase())||
+        client.email.toLowerCase().includes(searchClient.toLowerCase())||
+        client.notes.toLowerCase().includes(searchClient.toLowerCase())
+        );
+        this.setState({ clients: result })
+    }
+
+    handleTextSearch = (e) => {
+        const searchClient = e.currentTarget.value;
+        axios.get('/clients/')
+        .then(response => {
+        let clientCopy = (response.data) 
+        this.filterContent(clientCopy, searchClient)
+        })
+    }; 
+
     clientList() {
         return this.state.clients.map(currentclient => {
             return <Client client={currentclient} key={currentclient._id}/>; 
@@ -100,6 +121,17 @@ export default class ClientsList extends Component {
                         </Accordion.Toggle>
                         <Accordion.Collapse eventKey="1">
                         <Card.Body>
+                        <div className="search">
+                                <input 
+                                    className="form-control"
+                                    type="search"
+                                    placeholder="Search"
+                                    name="searchClient"
+                                    onChange={this.handleTextSearch}
+                                ></input>
+                        </div>
+                    <br>
+                    </br>
                 <table className="table table-sm table-hover table-bordered">
                     <thead className="thead-light">
                         <tr>

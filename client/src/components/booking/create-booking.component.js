@@ -6,7 +6,7 @@ import { Icon } from '@iconify/react';
 import arrowDropDownLine from '@iconify-icons/ri/arrow-drop-down-line';
 import DatePicker from 'react-date-picker'; 
 import NumberFormat from 'react-number-format';
-
+import '../styles/table-style.css'; 
 
 
 const BookingTimes = () => (

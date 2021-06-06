@@ -69,6 +69,8 @@ export default class SupplyList extends Component {
         this.compareByAscend.bind(this); 
         this.sortByUp.bind(this); 
         this.sortByDown.bind(this); 
+        this.filterContent.bind(this); 
+        this.handleTextSearch.bind(this); 
     }
 
     componentDidMount() {
@@ -122,6 +124,28 @@ export default class SupplyList extends Component {
         })
     }
 
+    filterContent(supplys, searchSupply) {
+        const result = supplys.filter((supply) => 
+        supply.supplyitem.toLowerCase().includes(searchSupply.toLowerCase())||
+        supply.vendor.toLowerCase().includes(searchSupply.toLowerCase())||
+        supply.instock.toString().includes(searchSupply)||
+        supply.need.toString().includes(searchSupply)||
+        supply.topurchase.toString().includes(searchSupply)||
+        supply.unitprice.toString().includes(searchSupply)||
+        supply.totalcost.toString().includes(searchSupply)
+        ); 
+        this.setState({ supplys: result })
+    }
+
+    handleTextSearch = (e) => {
+        const searchSupply = e.currentTarget.value; 
+        axios.get('/supplys/')
+        .then(response => {
+        let supplyCopy = (response.data) 
+        this.filterContent(supplyCopy, searchSupply)
+        })
+    }; 
+
     supplyList() {
         return this.state.supplys.map(currentsupply => {
             return <Supply supply={currentsupply} deleteSupply={this.deleteSupply} key={currentsupply._id}/>; 
@@ -139,6 +163,17 @@ export default class SupplyList extends Component {
                         </Accordion.Toggle>
                         <Accordion.Collapse eventKey="1">
                         <Card.Body>
+                        <div className="search">
+                                <input 
+                                    className="form-control"
+                                    type="search"
+                                    placeholder="Search"
+                                    name="searchSupply"
+                                    onChange={this.handleTextSearch}
+                                ></input>
+                        </div>
+                        <br>
+                        </br>
                 <table className="table table-sm table-hover table-bordered">
                     <thead className="thead-light">
                         <tr>

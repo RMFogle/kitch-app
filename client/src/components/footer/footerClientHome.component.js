@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import "../styles/footer-style.css"; 
+import "../styles/footerClientHome-style.css"; 
 
-export default class Footer extends Component {
+export default class FooterClientHome extends Component {
 
     render() {
 
         return(
-            <footer className="main-footer">
+            <footer className="clienthome-footer">
                 <div className="container-fluid">
                     <hr />
                     <div className="row">

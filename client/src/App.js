@@ -52,6 +52,8 @@ import TrashRestoreClient from "./components/client/restoresClient-fromTrash.com
 import DataChart from "./components/report/data-charts.component"; 
 
 import Footer from "./components/footer/footer.component"; 
+import FooterHomePage from "./components/footer/footerHomePage.component"; 
+import FooterClientHome from "./components/footer/footerClientHome.component"; 
 
 
 
@@ -63,16 +65,17 @@ function App() {
       <br/>
       <Route exact path="/" component={MainNavbar} />
       <Route exact path="/" component={HomePage} />
-      <Route exact path="/" component={Footer} />
+      <Route exact path="/" component={FooterHomePage} />
       <Route path="/support" component={MainNavbar} />
       <Route path="/support" component={SupportPage} />
-      <Route path="/support" component={Footer} />
+      <Route path="/support" component={FooterHomePage} />
       <Route path="/pricing" component={MainNavbar} />
       <Route path="/pricing" component={PricingPage} />
-      <Route path="/pricing" component={Footer} />
+      <Route path="/pricing" component={FooterHomePage} />
       <Route path="/demo" component={SubNavbar} />
       <Route path="/demo" component={ClientHomePage} />
       <Route path="/demo" component={Footer} />
+      <Route path="/demo" component={FooterClientHome} />
       <Route path="/inventory" component={SubNavbar} />
       <Route path="/inventory" component={CreateInventory} />
       <Route path="/inventory" component={InventoryList} />

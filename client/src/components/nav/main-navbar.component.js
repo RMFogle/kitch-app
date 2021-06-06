@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Popover from 'react-bootstrap/Popover';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Logo1 from '../img/kitch-navlogo-2a.png';
-import '../styles/table-style.css'; 
+import '../styles/nav-style.css'; 
 
 
 export default class MainNavbar extends Component {
@@ -22,7 +22,7 @@ export default class MainNavbar extends Component {
         );
 
         return (
-            <Navbar collapseOnSelect expand="lg">
+            <Navbar collapseOnSelect expand="lg" className="nav-responsive">
                 <Navbar.Brand>
                     <Link to="/">
                     <img width="auto" height="auto" className="img-responsive" src={Logo1} alt="logo"></img>

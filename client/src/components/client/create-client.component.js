@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 import { Icon } from '@iconify/react';
 import arrowDropDownLine from '@iconify-icons/ri/arrow-drop-down-line';
 import NumberFormat from 'react-number-format';
+import '../styles/table-style.css';
 
 export default class CreateClient extends Component {
     constructor(props) {

@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 import { Icon } from '@iconify/react';
 import arrowDropDownLine from '@iconify-icons/ri/arrow-drop-down-line';
 import NumberFormat from 'react-number-format';
+import '../styles/scheduleDemo-style.css'; 
 
 
 export default class CreateScheduleDemo extends Component {
@@ -82,7 +83,7 @@ export default class CreateScheduleDemo extends Component {
                 <Accordion defaultActiveKey="1" id="schedule">
                     <Card border="info">
                         <Accordion.Toggle as={Card.Header} eventKey="0">
-                        <h4><Icon icon={arrowDropDownLine} height="2em" /> Click here to schedule a demo for you and your team</h4>
+                        <h4><Icon icon={arrowDropDownLine} height="2em" /> Click here to schedule a demo</h4>
                         </Accordion.Toggle>
                         <Accordion.Collapse eventKey="0">
                         <Card.Body>

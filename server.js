@@ -29,7 +29,6 @@ const archiveInventorysRouter = require('./routes/archiveInventorys');
 const trashBookingsRouter = require('./routes/trashBookings'); 
 const trashClientsRouter = require('./routes/trashClients'); 
 const trashInventorysRouter = require('./routes/trashInventorys');
-const scheduleDemosRouter = require('./routes/scheduleDemos'); 
 const contactUsRouter = require('./routes/contactUs');
 
 app.use('/bookings', bookingsRouter); 
@@ -42,7 +41,6 @@ app.use('/archiveInventorys', archiveInventorysRouter);
 app.use('/trashBookings', trashBookingsRouter); 
 app.use('/trashClients', trashClientsRouter); 
 app.use('/trashInventorys', trashInventorysRouter); 
-app.use('/scheduleDemos', scheduleDemosRouter); 
 app.use('/contactUs', contactUsRouter);
 
 if (process.env.NODE_ENV === "production") {

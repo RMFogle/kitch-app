@@ -1,6 +1,7 @@
 import React, { Component } from 'react'; 
 import axios from 'axios';
 import NumberFormat from 'react-number-format';
+import '../styles/contactUs-style.css'; 
 
 
 export default class CreateContactUs extends Component {

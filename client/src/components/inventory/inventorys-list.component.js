@@ -50,6 +50,8 @@ export default class InventoryList extends Component {
         this.compareByAscend.bind(this); 
         this.sortByUp.bind(this); 
         this.sortByDown.bind(this); 
+        this.filterContent.bind(this); 
+        this.handleTextSearch.bind(this);
     }
 
     componentDidMount() {
@@ -92,6 +94,31 @@ export default class InventoryList extends Component {
         this.setState({inventorys: arrayCopy});
     }
 
+    filterContent(inventorys, searchInventory) {
+        const result = inventorys.filter((inventory) => 
+        inventory.fooditem.toLowerCase().includes(searchInventory.toLowerCase())||
+        inventory.category.toLowerCase().includes(searchInventory.toLowerCase())||
+        inventory.unitsize.toString().includes(searchInventory)||
+        inventory.unittype.toLowerCase().includes(searchInventory.toLowerCase())||
+        inventory.date.toString().includes(searchInventory)||
+        inventory.instock.toString().includes(searchInventory)||
+        inventory.needed.toString().includes(searchInventory)||
+        inventory.topurchase.toString().includes(searchInventory)||
+        inventory.unitprice.toString().includes(searchInventory)||
+        inventory.totalcost.toString().includes(searchInventory)
+        );
+        this.setState({ inventorys: result }); 
+    }
+
+    handleTextSearch = (e) => {
+        const searchInventory = e.currentTarget.value; 
+        axios.get('/inventorys/')
+        .then(response => {
+        let inventoryCopy = (response.data)
+        this.filterContent(inventoryCopy, searchInventory)
+        })
+    }; 
+
     inventoryList() {
         console.log(this); 
         return this.state.inventorys.map(currentinventory => {
@@ -110,6 +137,17 @@ export default class InventoryList extends Component {
                         </Accordion.Toggle>
                         <Accordion.Collapse eventKey="1">
                         <Card.Body>
+                        <div className="search">
+                                <input
+                                    className="form-control"
+                                    type="search"
+                                    placeholder="Search"
+                                    name="searchInventory"
+                                    onChange={this.handleTextSearch}
+                                ></input>
+                            </div>
+                        <br>
+                        </br>
                 <table className="table table-sm table-hover table-bordered">
                     <thead className="thead-light">
                         <tr>

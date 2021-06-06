@@ -16,7 +16,7 @@
 }
 
 
-@media only screen and (max-width: 760px),
+/* @media only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px) {
                 .card-responsive {
                     width: 100%;
@@ -40,4 +40,4 @@
             body { 
                 width: 495px; 
             }
-        }
+        } */
