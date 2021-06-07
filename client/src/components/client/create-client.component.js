@@ -50,10 +50,7 @@ export default class CreateClient extends Component {
         });
     }
 
-    onSubmit(e) {
-        alert("Client Successfully Added!!!")
-        e.preventDefault(); 
-
+    addToClient() {
         const client = {
             clientname: this.state.clientname, 
             phone: this.state.phone, 
@@ -64,9 +61,26 @@ export default class CreateClient extends Component {
         console.log(client); 
 
         axios.post('/clients/add', client)
-            .then(res => console.log(res.data)); 
+        .then(res => console.log(res.data)); 
 
-        window.location = '/client';
+        this.setState({
+            clientname: '', 
+            phone: '', 
+            email: '', 
+            notes: ''
+        })
+    }
+
+    onSubmit(e) {
+        alert("Client Successfully Added!!!")
+        e.preventDefault(); 
+
+        console.log(this); 
+
+        axios.post([this.addToClient()])
+        .then(res => console.log(res.data)); 
+
+        window.location.reload();
     }
 
 
