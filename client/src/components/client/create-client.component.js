@@ -65,13 +65,6 @@ export default class CreateClient extends Component {
 
         axios.post('/clients/add', client)
             .then(res => console.log(res.data)); 
-            
-        this.setState({
-            clientname: '', 
-            phone: '', 
-            email: '',
-            notes: ''
-        })
 
         window.location = '/client';
     }
