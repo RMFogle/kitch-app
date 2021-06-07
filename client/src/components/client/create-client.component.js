@@ -5,6 +5,7 @@ import Card from 'react-bootstrap/Card';
 import { Icon } from '@iconify/react';
 import arrowDropDownLine from '@iconify-icons/ri/arrow-drop-down-line';
 import NumberFormat from 'react-number-format';
+import Button from 'react-bootstrap/Button'; 
 import '../styles/table-style.css';
 
 export default class CreateClient extends Component {
@@ -128,7 +129,7 @@ export default class CreateClient extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <input type="submit" value="Add Client" className="btn btn-primary" />
+                        <Button type="submit" value="Add Client">Add Client</Button>
                     </div>
                 </form>
                 </Card.Body>
