@@ -72,7 +72,7 @@ export default class CreateClient extends Component {
             notes: ''
         })
 
-        window.location.reload();
+        window.location = '/client';
     }
 
 
