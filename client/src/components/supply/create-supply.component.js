@@ -76,10 +76,7 @@ export default class CreateSupply extends Component {
         }); 
     }
 
-    onSubmit(e) {
-        alert("Supply Successfully Added!!!")
-        e.preventDefault(); 
-
+    addToSupply() {
         const supply = {
             supplyitem: this.state.supplyitem, 
             vendor: this.state.vendor, 
@@ -104,6 +101,16 @@ export default class CreateSupply extends Component {
             unitprice: '', 
             totalcost: ''
         })
+    }
+
+    onSubmit(e) {
+        alert("Supply Successfully Added!!!")
+        e.preventDefault(); 
+
+        console.log(this); 
+
+        axios.post([this.addToSupply()])
+        .then(res => console.log(res.data));
 
         window.location.reload(); 
     }

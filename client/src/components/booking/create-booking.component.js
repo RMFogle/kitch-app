@@ -220,11 +220,7 @@ export default class CreateBooking extends Component {
         return <MenuSelect />
     }
 
-
-    onSubmit(e) {
-        alert("Booking Successfully Added!!!")
-        e.preventDefault(); 
-
+    addToBooking() {
         const booking = {
             clientname: this.state.clientname, 
             eventtype: this.state.eventtype, 
@@ -257,6 +253,17 @@ export default class CreateBooking extends Component {
                 costperguest: '', 
                 totalcost: '', 
             })
+    }
+
+
+    onSubmit(e) {
+        alert("Booking Successfully Added!!!")
+        e.preventDefault(); 
+
+        console.log(this); 
+
+        axios.post([this.addToBooking()])
+            .then(res => console.log(res.data)); 
 
         window.location.reload(); 
     }

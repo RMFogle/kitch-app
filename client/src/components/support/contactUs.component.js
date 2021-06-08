@@ -46,10 +46,7 @@ export default class CreateContactUs extends Component {
         });
     }
 
-    onSubmit(e) {
-        alert("Your message has been sent!!!")
-        e.preventDefault(); 
-
+    addToContactUs() {
         const contactUs = {
             name: this.state.name, 
             phone: this.state.phone, 
@@ -68,6 +65,16 @@ export default class CreateContactUs extends Component {
             email: '',
             issue: ''
         })
+    }
+
+    onSubmit(e) {
+        alert("Your message has been sent!!!")
+        e.preventDefault(); 
+
+        console.log(this); 
+
+        axios.post([this.addToContactUs()])
+            .then(res => console.log(res.data)); 
 
         window.location = '/support';
     }

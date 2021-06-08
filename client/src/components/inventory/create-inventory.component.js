@@ -153,11 +153,7 @@ export default class CreateInventory extends Component {
         return <UnitType />
     }
 
-    
-    onSubmit(e) {
-        alert("Inventory Successfully Added!!!")
-        e.preventDefault(); 
-
+    addToInventory() {
         const inventory = {
             fooditem: this.state.fooditem,  
             category: this.state.category, 
@@ -188,6 +184,17 @@ export default class CreateInventory extends Component {
             unittype: '', 
             date: ''
         }) 
+    }
+
+    
+    onSubmit(e) {
+        alert("Inventory Successfully Added!!!")
+        e.preventDefault(); 
+
+        console.log(this); 
+
+        axios.post([this.addToInventory()])
+            .then(res => console.log(res.data)); 
 
         window.location.reload();
     }
