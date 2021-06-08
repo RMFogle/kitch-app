@@ -135,7 +135,7 @@ export default class CreateClient extends Component {
                         />
                     </div>
                     <div className="form-group">
-                        <Button type="submit" value="Add Client">Add Client</Button>
+                        <input type="submit" value="Add Client" className="btn btn-primary" />
                     </div>
                 </form>
                 </Card.Body>
