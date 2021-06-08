@@ -1,13 +1,12 @@
+# ![](https://github.com/RMFogle/kitch-app/blob/main/client/src/components/img/kitch-carousel.jpg)
+
 # kitch app
 Kitch app is a utility app for Catering companies to track inventory, clients and bookings. 
 
 ## Demo: 
 Here is a working live demo: https://intense-castle-88953.herokuapp.com/
 
-## Site 
-
-### Landing Page 
-![](https://github.com/RMFogle/kitch-app/blob/main/client/src/components/img/kitch-carousel.jpg)
+## Desktop & Mobile
 
 ### Inventory Table 
 ![](https://github.com/RMFogle/kitch-app/blob/main/client/src/components/img/inventory-info-home.jpg)
