@@ -12,15 +12,15 @@ const archiveClientSchema = new Schema({
     }, 
     phone: {
         type: String,  
-        required: true,
+        required: true
     }, 
     email: {
         type: String, 
-        required: true,
+        required: true
     },
     notes: {
         type: String, 
-        required: false,
+        required: false
     }, 
 }, {
     timestamps: true, 

@@ -8,19 +8,19 @@ const clientSchema = new Schema({
         required: true, 
         unique: true, 
         trim: true, 
-        minlength: 3 
+        minlength: 3
     }, 
     phone: {
         type: String,  
-        required: true,
+        required: true
     }, 
     email: {
         type: String, 
-        required: true,
+        required: true
     },
     notes: {
         type: String, 
-        required: false,
+        required: false
     }, 
 }, {
     timestamps: true, 
