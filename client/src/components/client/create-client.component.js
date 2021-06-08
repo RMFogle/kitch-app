@@ -71,9 +71,8 @@ export default class CreateClient extends Component {
         })
     }
 
-    onSubmit(e) {
+    onSubmit() {
         alert("Client Successfully Added!!!")
-        e.preventDefault(); 
 
         console.log(this); 
 
@@ -84,7 +83,7 @@ export default class CreateClient extends Component {
     }
 
 
-    render() { 
+    render() {
         return (
             <div className="form-responsive">
                 <Accordion>
