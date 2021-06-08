@@ -6,7 +6,7 @@ Kitch app is a utility app for Catering companies to track inventory, clients an
 ## Demo: 
 Here is a working live demo: https://intense-castle-88953.herokuapp.com/
 
-## Desktop & Mobile
+## Desktop & Mobile:
 
 ### Inventory Table 
 ![](https://github.com/RMFogle/kitch-app/blob/main/client/src/components/img/inventory-info-home.jpg)
@@ -18,7 +18,7 @@ Here is a working live demo: https://intense-castle-88953.herokuapp.com/
 To build a MERN fullstack app that looks and functions like a utility app that's marketable. 
 
 ## Why? 
-App fatigue pleagues certain management positions. Having formerly worked as a cook for a catering company and assisted with budgets and food inventory, we used multiple apps which caused miscomunication and delays. I wanted to make an app that serves as a one app solution to managing a catering company. 
+App fatigue plagues certain management positions. Having formerly worked as a cook for a catering company and assisted with budgets and food inventory, we used multiple apps which caused miscommunication and delays. I wanted to make an app that serves as a one app solution to managing a catering company. 
 
 ## Built with: 
 - React.js 
@@ -38,13 +38,13 @@ App fatigue pleagues certain management positions. Having formerly worked as a c
 - Search bar 
 - Sortable tables 
 - Auto calculate "total costs" based on "to purchase" and "unit price". 
-- mongoDb Charts display charts and graphs for total food costs per month, food expiration per month, how many clients added per month or total bookings cancelled. 
+- mongoDb Charts display charts and graphs for total food costs per month, food expiration per month, how many clients added per month, and total bookings cancelled. 
 
 ## Bugs: 
 - Axios post requests sometimes fail in mobile web browser chrome and safari. If user switches to "Request Desktop Site" on Chrome the issue becomes null. 
 
 ## Roadmap: 
-- Add JWT auth and create registar/sign in. 
+- Add JWT auth and create register/sign in. 
 - Add Google Sign-In. 
 - Build Calendar View under Bookings. 
 - Create Client Side Ordering and Checkout w/ React Credit Card or Stripe. 
