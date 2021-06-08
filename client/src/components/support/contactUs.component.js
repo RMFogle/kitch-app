@@ -69,7 +69,6 @@ export default class CreateContactUs extends Component {
 
     onSubmit(e) {
         alert("Your message has been sent!!!")
-        e.preventDefault(); 
 
         console.log(this); 
 
