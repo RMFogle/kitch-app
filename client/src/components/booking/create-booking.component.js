@@ -256,9 +256,8 @@ export default class CreateBooking extends Component {
     }
 
 
-    onSubmit(e) {
+    onSubmit() {
         alert("Booking Successfully Added!!!")
-        e.preventDefault(); 
 
         console.log(this); 
 

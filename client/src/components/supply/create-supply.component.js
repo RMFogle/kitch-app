@@ -103,9 +103,8 @@ export default class CreateSupply extends Component {
         })
     }
 
-    onSubmit(e) {
+    onSubmit() {
         alert("Supply Successfully Added!!!")
-        e.preventDefault(); 
 
         console.log(this); 
 

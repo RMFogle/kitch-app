@@ -187,9 +187,8 @@ export default class CreateInventory extends Component {
     }
 
     
-    onSubmit(e) {
+    onSubmit() {
         alert("Inventory Successfully Added!!!")
-        e.preventDefault(); 
 
         console.log(this); 
 
