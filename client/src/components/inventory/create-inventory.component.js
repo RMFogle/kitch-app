@@ -195,7 +195,7 @@ export default class CreateInventory extends Component {
         axios.post([this.addToInventory()])
             .then(res => console.log(res.data)); 
 
-        window.location.reload();
+        window.location = '/inventory'; 
     }
 
     render() {

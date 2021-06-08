@@ -78,7 +78,7 @@ export default class CreateClient extends Component {
         axios.post([this.addToClient()])
         .then(res => console.log(res.data)); 
 
-        window.location.reload();
+        window.location = '/client'; 
     }
 
 

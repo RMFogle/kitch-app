@@ -111,7 +111,7 @@ export default class CreateSupply extends Component {
         axios.post([this.addToSupply()])
         .then(res => console.log(res.data));
 
-        window.location.reload(); 
+        window.location = '/supply'; 
     }
 
     render() {
