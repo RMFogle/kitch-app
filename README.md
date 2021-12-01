@@ -41,9 +41,11 @@ App fatigue plagues certain management positions. Having formerly worked as a co
 - mongoDb Charts display charts and graphs for total food costs per month, food expiration per month, how many clients added per month, and total bookings cancelled. 
 
 ## Bugs: 
+- Load time for site is slow. Figure out root cause and speed up load time. 
 - Axios post requests sometimes fail in mobile web browser chrome and safari. If user switches to "Request Desktop Site" on Chrome the issue becomes null. 
 
 ## Roadmap: 
+- Improve load time.
 - Add JWT auth and create register/sign in. 
 - Add Google Sign-In. 
 - Build Calendar View under Bookings. 
